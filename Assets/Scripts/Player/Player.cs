@@ -19,6 +19,11 @@ public class Player : MonoBehaviour
     public float scaleDuration = .3f;
     public Ease ease = Ease.OutBack;
 
+    [Header("Animation Player")]
+    public string triggerRun = "Run";
+    public Animator animator;
+    public float durationAnimation = 0.3f;
+
     private float _currentSpeed;
 
     private void Update()
@@ -31,21 +36,43 @@ public class Player : MonoBehaviour
     private void HandleMoviment()
     {
         if (Input.GetKey(KeyCode.LeftShift))
+        {
+            animator.speed = 2;
             _currentSpeed = speedRun;
+        }
+
         else
+        {
             _currentSpeed = speed;
+            animator.speed = 1;
+        }
 
 
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             myRigidbody.velocity = new Vector2(-_currentSpeed, myRigidbody.velocity.y);
+            if (myRigidbody.transform.localScale.x != -1)
+            {
+                myRigidbody.transform.DOScaleX(-1, durationAnimation);
+            }
+            animator.SetBool(triggerRun, true);
 
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
             myRigidbody.velocity = new Vector2(_currentSpeed, myRigidbody.velocity.y);
+            if (myRigidbody.transform.localScale.x != 1)
+            {
+                myRigidbody.transform.DOScaleX(1, durationAnimation);
+            }
+            animator.SetBool(triggerRun, true);
         }
+        else
+        {
+            animator.SetBool(triggerRun, false);
+        }
+
 
         if (myRigidbody.velocity.x < 0)
         {
