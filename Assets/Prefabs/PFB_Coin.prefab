@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 8584494444071569646}
   - component: {fileID: 7525402226217277410}
   - component: {fileID: 7799657206042389702}
+  - component: {fileID: 6210114700686405496}
   m_Layer: 0
   m_Name: PFB_Coin
   m_TagString: Untagged
@@ -166,3 +167,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   compareTag: Player
+--- !u!210 &6210114700686405496
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7558216309945445894}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 14
+  m_SortAtRoot: 0
