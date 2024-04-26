@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+
 public class ItemManager : MonoBehaviour
 {
-    public TextMeshProUGUI TextMeshPro;
     public static ItemManager Instance;
-    public int coins;
+    public SOInt coins;
+    public SOInt miniBalls;
 
     private void Awake()
     {
@@ -15,6 +16,7 @@ public class ItemManager : MonoBehaviour
             Instance = this;
         else
             Destroy(gameObject);
+        
     }
 
     private void Start()
@@ -23,15 +25,19 @@ public class ItemManager : MonoBehaviour
     }
     private void Reset()
     {
-        coins = 0;
+        coins.value = 0;
+        miniBalls.value = 0;
     }
 
     public void AddCoins(int amount = 1)
     {
-        coins += amount;
-        TextMeshPro.text = coins.ToString();
+        coins.value += amount;
+        
     }
 
-
+    public void AddMiniBall(int amount = 1)
+    {
+        miniBalls.value += amount;
+    }
 
 }
