@@ -7,7 +7,12 @@ public class Player : MonoBehaviour
 {
     public Rigidbody2D myRigidbody;
 
-    public Animator animator;
+    //public Animator animator;
+
+
+
+    private Animator _currentPlayer;
+
 
     [Header("Setup")]
     public SOPlayer soPlayer;
@@ -26,12 +31,15 @@ public class Player : MonoBehaviour
 
            
         }
+
+        _currentPlayer = Instantiate(soPlayer.player, transform);
+
     }
 
     private void OnPlayerKill()
     {
         HealthBase.OnKill -= OnPlayerKill;
-        animator.SetTrigger(soPlayer.triggerDeath);
+        _currentPlayer.SetTrigger(soPlayer.triggerDeath);
     }
 
 
@@ -46,14 +54,14 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            animator.speed = 2;
+            _currentPlayer.speed = 2;
             _currentSpeed = soPlayer.speedRun;
         }
 
         else
         {
             _currentSpeed = soPlayer.speed;
-            animator.speed = 1;
+            _currentPlayer.speed = 1;
         }
 
 
@@ -65,7 +73,7 @@ public class Player : MonoBehaviour
             {
                 myRigidbody.transform.DOScaleX(-1, soPlayer.durationAnimation);
             }
-            animator.SetBool(soPlayer.triggerRun, true);
+            _currentPlayer.SetBool(soPlayer.triggerRun, true);
 
         }
         else if (Input.GetKey(KeyCode.RightArrow))
@@ -75,11 +83,11 @@ public class Player : MonoBehaviour
             {
                 myRigidbody.transform.DOScaleX(1, soPlayer.durationAnimation);
             }
-            animator.SetBool(soPlayer.triggerRun, true);
+            _currentPlayer.SetBool(soPlayer.triggerRun, true);
         }
         else
         {
-            animator.SetBool(soPlayer.triggerRun, false);
+            _currentPlayer.SetBool(soPlayer.triggerRun, false);
         }
 
 
