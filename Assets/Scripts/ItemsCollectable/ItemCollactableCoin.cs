@@ -10,7 +10,6 @@ public class ItemCollactableCoin : ItemCollactableBase
         base.OnCollect();
         ItemManager.Instance.AddCoins();
         
-        
     }
     
 }
