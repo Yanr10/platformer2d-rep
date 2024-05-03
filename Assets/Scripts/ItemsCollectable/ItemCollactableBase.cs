@@ -6,7 +6,9 @@ public class ItemCollactableBase : MonoBehaviour
 {
     public string compareTag = "Player";
     public ParticleSystem ParticleSystem;
+    public float TimeToHide = 3f;
 
+    [Header("Sounds")]
     public AudioSource audioSource;
 
 
@@ -25,11 +27,14 @@ public class ItemCollactableBase : MonoBehaviour
 
     protected virtual void Collect()
     {
-        gameObject.SetActive(false);
+        Invoke("HideOnObject", TimeToHide);
         OnCollect();
 
     }
-
+    private void HideOnObject()
+    {
+        gameObject.SetActive(false);
+    }
     
 
     protected virtual void OnCollect()

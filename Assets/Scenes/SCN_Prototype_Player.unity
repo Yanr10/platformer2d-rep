@@ -400,6 +400,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   compareTag: Player
   ParticleSystem: {fileID: 1789222564}
+  TimeToHide: 0.3
+  audioSource: {fileID: 1878649721}
 --- !u!4 &175644737 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8584494444071569646, guid: 2d9a48d0c37060d43b6b2c1cdf366395, type: 3}
@@ -5918,6 +5920,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   compareTag: Player
   ParticleSystem: {fileID: 1372824471}
+  TimeToHide: 0.3
+  audioSource: {fileID: 1878649721}
 --- !u!1 &477942570
 GameObject:
   m_ObjectHideFlags: 0
@@ -7064,6 +7068,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!82 &829635201 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7325352422268919993, guid: 0651d962667184b41923f7c8373e581b, type: 3}
+  m_PrefabInstance: {fileID: 7416320318761084535}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &838657138
 GameObject:
   m_ObjectHideFlags: 0
@@ -8042,6 +8051,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   compareTag: Player
   ParticleSystem: {fileID: 269889635}
+  TimeToHide: 0.3
+  audioSource: {fileID: 1768554357}
 --- !u!1001 &1139266501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9627,6 +9638,11 @@ Transform:
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 7574589834738648395, guid: 2d9a48d0c37060d43b6b2c1cdf366395, type: 3}
   m_PrefabInstance: {fileID: 5655681891083588375}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1768554357 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7325352422268919993, guid: 0651d962667184b41923f7c8373e581b, type: 3}
+  m_PrefabInstance: {fileID: 994661311}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1776159792
 GameObject:
@@ -19834,6 +19850,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!82 &1878649721 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7325352422268919993, guid: 0651d962667184b41923f7c8373e581b, type: 3}
+  m_PrefabInstance: {fileID: 1467387070}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1901569253
 GameObject:
   m_ObjectHideFlags: 0
@@ -20817,6 +20838,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6173921761824626824, guid: 2d9a48d0c37060d43b6b2c1cdf366395, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6173921761824626824, guid: 2d9a48d0c37060d43b6b2c1cdf366395, type: 3}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6173921761824626824, guid: 2d9a48d0c37060d43b6b2c1cdf366395, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3cd33786ea8c04c65a99918066a87684, type: 3}
+    - target: {fileID: 6173921761824626824, guid: 2d9a48d0c37060d43b6b2c1cdf366395, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7558216309945445894, guid: 2d9a48d0c37060d43b6b2c1cdf366395, type: 3}
       propertyPath: m_Name
       value: PFB_Coin
@@ -20983,6 +21020,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   compareTag: Player
   ParticleSystem: {fileID: 1561059992972372627}
+  TimeToHide: 0.2
+  audioSource: {fileID: 829635201}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

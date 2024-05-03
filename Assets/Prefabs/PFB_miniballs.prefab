@@ -5187,6 +5187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   compareTag: Player
   ParticleSystem: {fileID: 0}
+  TimeToHide: 0.2
   audioSource: {fileID: 7325352422268919993}
 --- !u!210 &8815253618502479910
 SortingGroup:
