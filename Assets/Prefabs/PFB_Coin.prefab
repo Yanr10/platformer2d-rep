@@ -300,6 +300,7 @@ MonoBehaviour:
   ParticleSystem: {fileID: 7574589834738648395}
   TimeToHide: 0.3
   audioSource: {fileID: 6173921761824626824}
+  collider2D: {fileID: 7525402226217277410}
 --- !u!210 &6210114700686405496
 SortingGroup:
   m_ObjectHideFlags: 0

@@ -5111,7 +5111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2758032172136563332}
   - component: {fileID: 5846316338413557566}
-  - component: {fileID: 476600607562191695}
+  - component: {fileID: 2904916489853741217}
   - component: {fileID: 8815253618502479910}
   m_Layer: 0
   m_Name: PFB_miniballs
@@ -5173,7 +5173,7 @@ CircleCollider2D:
   m_Offset: {x: -0.27268827, y: 0.37047768}
   serializedVersion: 2
   m_Radius: 0.712458
---- !u!114 &476600607562191695
+--- !u!114 &2904916489853741217
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5182,13 +5182,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3604881247398809569}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c20a092d7a48724782e078ff5960459, type: 3}
+  m_Script: {fileID: 11500000, guid: 359704f0f87de0e4081d3e84e5bc60e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   compareTag: Player
-  ParticleSystem: {fileID: 0}
+  ParticleSystem: {fileID: 8595859222153906272}
   TimeToHide: 0.2
   audioSource: {fileID: 7325352422268919993}
+  collider2D: {fileID: 5846316338413557566}
 --- !u!210 &8815253618502479910
 SortingGroup:
   m_ObjectHideFlags: 0
