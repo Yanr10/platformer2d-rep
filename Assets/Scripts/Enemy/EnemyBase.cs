@@ -12,6 +12,8 @@ public class EnemyBase : MonoBehaviour
     public HealthBase healthBase;
     public float timeToDestroyEnemy = .3f;
 
+    public AudioSource AudioDeath;
+
     private void Awake()
     {
         if (healthBase != null)
@@ -25,6 +27,7 @@ public class EnemyBase : MonoBehaviour
     {
         healthBase.OnKill -= OnEnemyKill;
         DeathAnimation();
+        if (AudioDeath != null) AudioDeath.Play();
         Destroy(gameObject, timeToDestroyEnemy);
 
     }
